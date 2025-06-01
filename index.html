@@ -8,10 +8,149 @@
     <title>Portfolio - Eytan Lacombe</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+
+	 <style>
+        .background-alt {
+            background: #f2f2f5;
+            padding: 80px 0;
+        }
+        
+        .heading {
+            position: relative;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #374054;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+		 .input-style::placeholder,
+textarea::placeholder {
+    color: black;
+}
+
+        
+        .heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .project {
+            background: white;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e8e8e8;
+        }
+        
+        .project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .shadow-large {
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+        
+        .project-info {
+            padding: 40px;
+        }
+        
+        .project-info h3 {
+            color: #3498db;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .project-info h4 {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .project-info p {
+            line-height: 1.7;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .project-info strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 5px 5px 5px 0;
+            font-weight: 500;
+        }
+        
+        .project-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 2rem;
+            }
+            .project-info {
+                padding: 25px;
+            }
+            .project-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -156,90 +295,172 @@
     <div id="projects" class="background-alt">
         <h2 class="heading">Projets Réalisés</h2>
         <div class="container">
-            <div class="row">
-                
-                  <!-- Projet 1: Site Web Dynamique -->
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Site Web Dynamique - SAE SALT</h3>
-                        <h4>Projet de groupe | Durée: 8 semaines | Équipe de 4 personnes</h4>
-                        <p>
-                            <strong>Contexte :</strong> Développement d'un site web complet avec base de données en utilisant la méthodologie agile (Scrum). Projet universitaire S3/S4.
-                            <br><br><strong>Technologies utilisées :</strong> PHP, MySQL, HTML/CSS/JavaScript, Apache
-                            <br><br><strong>Réalisations :</strong>
-                            <br>• Conception et création complète de la base de données (MCD, MLD, requêtes SQL complexes)
-                            <br>• Développement du back-end en PHP (architecture MVC)
-                            <br>• Interface utilisateur responsive et interactive
-                            <br>• Gestion d'utilisateurs, authentification, sécurisation des données
-                            <br>• Tests et débogage collaboratif
-                            <br><br><strong>Méthodologie :</strong> Sprints de 2 semaines, daily meetings, rétrospectives
-                            <br><br><strong>Compétences techniques acquises :</strong> Maîtrise de PHP, conception BDD avancée, sécurité web, intégration front/back
-                            <br><strong>Compétences humaines :</strong> Leadership technique, gestion de conflits, répartition des tâches, communication client
-                        </p>
+            <!-- Projet 1: Site Web Dynamique -->
+            <div class="project shadow-large">
+                <div class="project-info">
+                    <h3><i class="fa fa-globe" style="margin-right: 10px;"></i>Site Web Dynamique - SAE SALT</h3>
+                    <h4>Projet de groupe | 8 semaines | Équipe de 4 personnes</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Apache</span>
+                    </div>
+                    
+                    <p>
+                        <strong>Contexte :</strong> Développement d'un site web complet avec base de données en utilisant la méthodologie agile (Scrum). Projet universitaire S3/S4.
+                        <br><br><strong>Réalisations :</strong>
+                        <br>• Conception et création complète de la base de données (MCD, MLD, requêtes SQL complexes)
+                        <br>• Développement du back-end en PHP (architecture MVC)
+                        <br>• Interface utilisateur responsive et interactive
+                        <br>• Gestion d'utilisateurs, authentification, sécurisation des données
+                        <br>• Tests et débogage collaboratif
+                        <br><br><strong>Méthodologie :</strong> Sprints de 2 semaines, daily meetings, rétrospectives
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <div class="stat-label">Semaines</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <div class="stat-label">Développeurs</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">MVC</span>
+                            <div class="stat-label">Architecture</div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Projet 2: Jeu Aventuriers du Rail -->
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Jeu "Aventuriers du Rail" - Java/JavaFX</h3>
-                        <h4>Projet de groupe | Durée: 10 semaines | Équipe de 3 personnes</h4>
-                        <p>
-                            <strong>Contexte :</strong> Reproduction fidèle du jeu de société "Les Aventuriers du Rail" avec interface graphique complète.
-                            <br><br><strong>Technologies utilisées :</strong> Java, JavaFX, Maven, Git
-                            <br><br><strong>Réalisations :</strong>
-                            <br>• Implémentation complète des règles du jeu (logique métier)
-                            <br>• Interface graphique intuitive avec JavaFX (plateau interactif, animations)
-                            <br>• Gestion multi-joueurs local
-                            <br>• Architecture orientée objet robuste (design patterns)
-                            <br>• Tests unitaires et intégration continue
-                            <br><br><strong>Défis techniques :</strong> Gestion des états complexes, optimisation des performances, architecture MVC
-                            <br><br><strong>Compétences techniques acquises :</strong> Maîtrise Java avancée, JavaFX, architecture logicielle, tests automatisés
-                            <br><strong>Compétences humaines :</strong> Coordination d'équipe, résolution de problèmes complexes, persévérance face aux bugs
-                        </p>
+            <!-- Projet 2: Jeu Aventuriers du Rail -->
+            <div class="project shadow-large">
+                <div class="project-info">
+                    <h3><i class="fa fa-gamepad" style="margin-right: 10px;"></i>Jeu "Aventuriers du Rail" - Java/JavaFX</h3>
+                    <h4>Projet de groupe | 10 semaines | Équipe de 3 personnes</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">Maven</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">JUnit</span>
+                    </div>
+                    
+                    <p>
+                        <strong>Contexte :</strong> Reproduction fidèle du jeu de société "Les Aventuriers du Rail" avec interface graphique complète.
+                        <br><br><strong>Réalisations :</strong>
+                        <br>• Implémentation complète des règles du jeu (logique métier)
+                        <br>• Interface graphique intuitive avec JavaFX (plateau interactif, animations)
+                        <br>• Gestion multi-joueurs local
+                        <br>• Architecture orientée objet robuste (design patterns)
+                        <br>• Tests unitaires et intégration continue
+                        <br><br><strong>Défis techniques :</strong> Gestion des états complexes, optimisation des performances, architecture MVC
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10</span>
+                            <div class="stat-label">Semaines</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <div class="stat-label">Développeurs</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2-6</span>
+                            <div class="stat-label">Joueurs</div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Projet 3: Installation XAMPP -->
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Configuration Environnement XAMPP</h3>
-                        <h4>Projet individuel | Durée: 2 semaines</h4>
-                        <p>
-                            <strong>Contexte :</strong> Installation et configuration d'un environnement de développement web local complet dans le cadre de la SAE 2.03.
-                            <br><br><strong>Technologies utilisées :</strong> XAMPP (Apache, MySQL, PHP), Linux Ubuntu
-                            <br><br><strong>Réalisations :</strong>
-                            <br>• Installation et configuration d'Apache (virtual hosts, .htaccess)
-                            <br>• Configuration MySQL (utilisateurs, privilèges, bases de données)
-                            <br>• Configuration PHP (modules, php.ini, versions multiples)
-                            <br>• Sécurisation de l'environnement (pare-feu, permissions)
-                            <br>• Documentation complète des procédures d'installation
-                            <br><br><strong>Difficultés rencontrées :</strong> Conflits de ports, problèmes de permissions, compatibilité système
-                            <br><br><strong>Compétences techniques acquises :</strong> Administration système Linux, configuration serveur web, troubleshooting
-                            <br><strong>Compétences humaines :</strong> Autonomie, recherche de solutions, documentation technique
-                        </p>
+            <!-- Projet 3: Installation XAMPP -->
+            <div class="project shadow-large">
+                <div class="project-info">
+                    <h3><i class="fa fa-server" style="margin-right: 10px;"></i>Configuration Environnement XAMPP</h3>
+                    <h4>Projet individuel | 2 semaines</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <span class="tech-tag">XAMPP</span>
+                        <span class="tech-tag">Apache</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Linux Ubuntu</span>
+                    </div>
+                    
+                    <p>
+                        <strong>Contexte :</strong> Installation et configuration d'un environnement de développement web local complet dans le cadre de la SAE 2.03.
+                        <br><br><strong>Réalisations :</strong>
+                        <br>• Installation et configuration d'Apache (virtual hosts, .htaccess)
+                        <br>• Configuration MySQL (utilisateurs, privilèges, bases de données)
+                        <br>• Configuration PHP (modules, php.ini, versions multiples)
+                        <br>• Sécurisation de l'environnement (pare-feu, permissions)
+                        <br>• Documentation complète des procédures d'installation
+                        <br><br><strong>Difficultés rencontrées :</strong> Conflits de ports, problèmes de permissions, compatibilité système
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <div class="stat-label">Semaines</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">LAMP</span>
+                            <div class="stat-label">Stack</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <div class="stat-label">Autonomie</div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Projet 4: Escape Game -->
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Site Vitrine Escape Game</h3>
-                        <h4>Projet de groupe | Durée: 6 semaines | Équipe de 4 personnes</h4>
-                        <p>
-                            <strong>Contexte :</strong> Création d'un site vitrine professionnel pour une entreprise d'escape game fictive.
-                            <br><br><strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript, Bootstrap
-                            <br><br><strong>Réalisations :</strong>
-                            <br>• Design responsive et moderne
-                            <br>• Système de réservation en ligne
-                            <br>• Galerie interactive des salles
-                            <br>• Optimisation SEO et performances
-                            <br><br><strong>Compétences techniques acquises :</strong> Front-end moderne, UX/UI design, optimisation web
-                            <br><strong>Compétences humaines :</strong> Créativité, sens esthétique, analyse des besoins client
-                        </p>
+            <!-- Projet 4: Escape Game -->
+            <div class="project shadow-large">
+                <div class="project-info">
+                    <h3><i class="fa fa-puzzle-piece" style="margin-right: 10px;"></i>Site Vitrine Escape Game</h3>
+                    <h4>Projet de groupe | 6 semaines | Équipe de 4 personnes</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">SEO</span>
+                    </div>
+                    
+                    <p>
+                        <strong>Contexte :</strong> Création d'un site vitrine professionnel pour une entreprise d'escape game fictive.
+                        <br><br><strong>Réalisations :</strong>
+                        <br>• Design responsive et moderne
+                        <br>• Système de réservation en ligne
+                        <br>• Galerie interactive des salles
+                        <br>• Optimisation SEO et performances
+                        <br>• Interface utilisateur intuitive et engageante
+                        <br><br><strong>Compétences développées :</strong> Front-end moderne, UX/UI design, optimisation web, créativité, analyse des besoins client
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">6</span>
+                            <div class="stat-label">Semaines</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <div class="stat-label">Développeurs</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <div class="stat-label">Responsive</div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -350,25 +571,25 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group" style="margin-bottom: 20px;">
-                                    <input type="text" name="name" placeholder="Votre nom" required 
+                                    <input type="text" name="name" class="input-style" placeholder="Votre nom" required 
                                            style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group" style="margin-bottom: 20px;">
-                                    <input type="email" name="_replyto" placeholder="Votre email" required 
+                                    <input type="email" name="_replyto" class="input-style" placeholder="Votre email" required 
                                            style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="text" name="subject" placeholder="Sujet de votre message" 
+                            <input type="text" name="subject" class="input-style" placeholder="Sujet de votre message" 
                                    style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
                         </div>
                         
                         <div class="form-group" style="margin-bottom: 30px;">
-                            <textarea name="message" placeholder="Votre message" required rows="6" 
+                            <textarea name="message" class="input-style" placeholder="Votre message" required rows="6" 
                                       style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px; resize: vertical;"></textarea>
                         </div>
                         
@@ -420,7 +641,7 @@
         <div class="row">
             <!-- Section principale -->
             <div class="col-md-6" style="margin-bottom: 30px;">
-                <h4 style="color: #3498db; margin-bottom: 20px; font-size: 1.5rem;">[VOTRE_NOM]</h4>
+                <h4 style="color: #3498db; margin-bottom: 20px; font-size: 1.5rem;">Lacombe Eytan</h4>
                 <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 20px;">
                     Étudiant en BUT Informatique passionné par le développement web et les nouvelles technologies. 
                     Toujours à la recherche de nouveaux défis et opportunités d'apprentissage.
@@ -432,7 +653,7 @@
                     </span>
                     <span style="background: #e74c3c; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">
                         <i class="fa fa-map-marker" style="margin-right: 5px;"></i>
-                        Villefontaine
+                        Sète, Marseille, Montpellier
                     </span>
                 </div>
             </div>
@@ -493,7 +714,7 @@
                         <i class="fa fa-twitter"></i>
                     </a>
                     
-                    <a href="mailto:[VOTRE_EMAIL]" 
+                    <a href="mailto:eytanlacombe29@yahoo.com" 
                        style="display: inline-block; width: 45px; height: 45px; background: #ea4335; color: white; text-align: center; line-height: 45px; border-radius: 50%; margin: 0 8px 10px 0; transition: all 0.3s ease; text-decoration: none;" 
                        onmouseover="this.style.background='#c23321'; this.style.transform='translateY(-3px)'" 
                        onmouseout="this.style.background='#ea4335'; this.style.transform='translateY(0)'">

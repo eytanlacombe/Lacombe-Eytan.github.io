@@ -328,63 +328,212 @@
     </div>
 </div>
 
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+    <!-- Section Contact modernisée -->
+<div id="contact" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0; color: white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-weight: 300;">Contactez-moi</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 50px; opacity: 0.9;">
+                    Vous avez un projet en tête ? Une question ? N'hésitez pas à me contacter !
+                </p>
+            </div>
         </div>
-        <!-- End #contact-form -->
-    </div>
-				    
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2022</span> YOUR NAME
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+        
+        <div class="row">
+            <!-- Formulaire de contact -->
+            <div class="col-md-8 col-md-offset-2">
+                <div id="contact-form" style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 15px; backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                    <form method="POST" action="https://formspree.io/f/[VOTRE_FORMSPREE_ID]">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio" />
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <input type="text" name="name" placeholder="Votre nom" required 
+                                           style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <input type="email" name="_replyto" placeholder="Votre email" required 
+                                           style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <input type="text" name="subject" placeholder="Sujet de votre message" 
+                                   style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <textarea name="message" placeholder="Votre message" required rows="6" 
+                                      style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px; resize: vertical;"></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" style="background: #ff6b6b; color: white; border: none; padding: 15px 40px; border-radius: 25px; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255,107,107,0.4);" 
+                                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255,107,107,0.6)'" 
+                                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255,107,107,0.4)'">
+                                <i class="fa fa-paper-plane" style="margin-right: 10px;"></i>
+                                Envoyer le message
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+        
+        <!-- Informations de contact alternatives -->
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-md-4 text-center" style="margin-bottom: 30px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; height: 100%;">
+                    <i class="fa fa-envelope" style="font-size: 2rem; margin-bottom: 15px; color: #ff6b6b;"></i>
+                    <h4 style="margin-bottom: 10px;">Email</h4>
+                    <p style="margin: 0; opacity: 0.9;">[VOTRE_EMAIL]</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 text-center" style="margin-bottom: 30px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; height: 100%;">
+                    <i class="fa fa-map-marker" style="font-size: 2rem; margin-bottom: 15px; color: #4ecdc4;"></i>
+                    <h4 style="margin-bottom: 10px;">Localisation</h4>
+                    <p style="margin: 0; opacity: 0.9;">Villefontaine, France</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 text-center" style="margin-bottom: 30px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; height: 100%;">
+                    <i class="fa fa-clock-o" style="font-size: 2rem; margin-bottom: 15px; color: #45b7d1;"></i>
+                    <h4 style="margin-bottom: 10px;">Disponibilité</h4>
+                    <p style="margin: 0; opacity: 0.9;">Lun - Ven, 9h - 18h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer modernisé -->
+<footer style="background: #2c3e50; padding: 50px 0 30px; color: white;">
+    <div class="container">
+        <div class="row">
+            <!-- Section principale -->
+            <div class="col-md-6" style="margin-bottom: 30px;">
+                <h4 style="color: #3498db; margin-bottom: 20px; font-size: 1.5rem;">[VOTRE_NOM]</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 20px;">
+                    Étudiant en BUT Informatique passionné par le développement web et les nouvelles technologies. 
+                    Toujours à la recherche de nouveaux défis et opportunités d'apprentissage.
+                </p>
+                <div style="margin-top: 20px;">
+                    <span style="background: #3498db; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin-right: 10px;">
+                        <i class="fa fa-graduation-cap" style="margin-right: 5px;"></i>
+                        BUT Informatique
+                    </span>
+                    <span style="background: #e74c3c; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">
+                        <i class="fa fa-map-marker" style="margin-right: 5px;"></i>
+                        Villefontaine
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Liens rapides -->
+            <div class="col-md-3" style="margin-bottom: 30px;">
+                <h5 style="color: #3498db; margin-bottom: 20px;">Navigation</h5>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">
+                        <a href="#about" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" 
+                           onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#bdc3c7'">
+                            <i class="fa fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>À propos
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="#experience" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" 
+                           onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#bdc3c7'">
+                            <i class="fa fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Expérience
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="#projects" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" 
+                           onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#bdc3c7'">
+                            <i class="fa fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Projets
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="#apprentissage" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" 
+                           onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#bdc3c7'">
+                            <i class="fa fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Compétences
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Réseaux sociaux -->
+            <div class="col-md-3" style="margin-bottom: 30px;">
+                <h5 style="color: #3498db; margin-bottom: 20px;">Suivez-moi</h5>
+                <div class="social-links">
+                    <a href="[VOTRE_GITHUB]" target="_blank" 
+                       style="display: inline-block; width: 45px; height: 45px; background: #333; color: white; text-align: center; line-height: 45px; border-radius: 50%; margin: 0 8px 10px 0; transition: all 0.3s ease; text-decoration: none;" 
+                       onmouseover="this.style.background='#333'; this.style.transform='translateY(-3px)'" 
+                       onmouseout="this.style.background='#333'; this.style.transform='translateY(0)'">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    
+                    <a href="[VOTRE_LINKEDIN]" target="_blank" 
+                       style="display: inline-block; width: 45px; height: 45px; background: #0077b5; color: white; text-align: center; line-height: 45px; border-radius: 50%; margin: 0 8px 10px 0; transition: all 0.3s ease; text-decoration: none;" 
+                       onmouseover="this.style.background='#005885'; this.style.transform='translateY(-3px)'" 
+                       onmouseout="this.style.background='#0077b5'; this.style.transform='translateY(0)'">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    
+                    <a href="[VOTRE_TWITTER]" target="_blank" 
+                       style="display: inline-block; width: 45px; height: 45px; background: #1da1f2; color: white; text-align: center; line-height: 45px; border-radius: 50%; margin: 0 8px 10px 0; transition: all 0.3s ease; text-decoration: none;" 
+                       onmouseover="this.style.background='#0d8bd9'; this.style.transform='translateY(-3px)'" 
+                       onmouseout="this.style.background='#1da1f2'; this.style.transform='translateY(0)'">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    
+                    <a href="mailto:[VOTRE_EMAIL]" 
+                       style="display: inline-block; width: 45px; height: 45px; background: #ea4335; color: white; text-align: center; line-height: 45px; border-radius: 50%; margin: 0 8px 10px 0; transition: all 0.3s ease; text-decoration: none;" 
+                       onmouseover="this.style.background='#c23321'; this.style.transform='translateY(-3px)'" 
+                       onmouseout="this.style.background='#ea4335'; this.style.transform='translateY(0)'">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <!-- Bouton retour en haut -->
+                <div style="margin-top: 20px;">
+                    <span id="to-top" style="display: inline-block; background: #3498db; color: white; width: 50px; height: 50px; text-align: center; line-height: 50px; border-radius: 50%; cursor: pointer; transition: all 0.3s ease;" 
+                          onmouseover="this.style.background='#2980b9'; this.style.transform='translateY(-3px)'" 
+                          onmouseout="this.style.background='#3498db'; this.style.transform='translateY(0)'"
+                          onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                        <i class="fa fa-chevron-up"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ligne de séparation -->
+        <hr style="border: none; height: 1px; background: #34495e; margin: 30px 0;">
+        
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="margin: 0; opacity: 0.7; font-size: 0.9rem;">
+                    Copyright &copy; <span id="current-year">2024</span> [VOTRE_NOM]. 
+                    Tous droits réservés. | Développé avec ❤️ et ☕
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+	<script>
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 
 </html>

@@ -29,6 +29,32 @@
             margin-bottom: 60px;
             font-weight: 300;
         }
+		 .input-style::placeholder,
+textarea::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+}
+
+/* Pour Firefox */
+.input-style::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: black !important;
+    opacity: 1 !important;
+}
+
+/* Pour Webkit (Chrome, Safari) */
+.input-style::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: black !important;
+    opacity: 1 !important;
+}
+
+/* Pour Edge */
+.input-style:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: black !important;
+    opacity: 1 !important;
+}
 
 		 .input-style::placeholder,
 textarea::placeholder {
@@ -858,29 +884,29 @@ textarea::placeholder {
                         <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio" />
                         
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group" style="margin-bottom: 20px;">
-                                    <input type="text" name="name" class="input-style" placeholder="Votre nom" required 
-                                           style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group" style="margin-bottom: 20px;">
-                                    <input type="email" name="_replyto" class="input-style" placeholder="Votre email" required 
-                                           style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="text" name="subject" class="input-style" placeholder="Sujet de votre message" 
-                                   style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
-                        </div>
-                        
-                        <div class="form-group" style="margin-bottom: 30px;">
-                            <textarea name="message" class="input-style" placeholder="Votre message" required rows="6" 
-                                      style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px; resize: vertical;"></textarea>
-                        </div>
+            <div class="col-md-6">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <input type="text" name="name" class="input-style" placeholder="Votre nom" required 
+                           style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <input type="email" name="_replyto" class="input-style" placeholder="Votre email" required 
+                           style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 20px;">
+            <input type="text" name="subject" class="input-style" placeholder="Sujet de votre message" 
+                   style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 30px;">
+            <textarea name="message" class="input-style" placeholder="Votre message" required rows="6" 
+                      style="width: 100%; padding: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px; resize: vertical;"></textarea>
+        </div>
                         
                         <div class="text-center">
                             <button type="submit" style="background: #ff6b6b; color: white; border: none; padding: 15px 40px; border-radius: 25px; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255,107,107,0.4);" 
@@ -901,7 +927,7 @@ textarea::placeholder {
                 <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; height: 100%;">
                     <i class="fa fa-envelope" style="font-size: 2rem; margin-bottom: 15px; color: #ff6b6b;"></i>
                     <h4 style="margin-bottom: 10px;">Email</h4>
-                    <p style="margin: 0; opacity: 0.9;">[VOTRE_EMAIL]</p>
+                    <p style="margin: 0; opacity: 0.9;">eytanlacombe29@yahoo.com</p>
                 </div>
             </div>
             
@@ -909,7 +935,7 @@ textarea::placeholder {
                 <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; height: 100%;">
                     <i class="fa fa-map-marker" style="font-size: 2rem; margin-bottom: 15px; color: #4ecdc4;"></i>
                     <h4 style="margin-bottom: 10px;">Localisation</h4>
-                    <p style="margin: 0; opacity: 0.9;">Villefontaine, France</p>
+                    <p style="margin: 0; opacity: 0.9;">Sète, Montpellier, Marseille</p>
                 </div>
             </div>
             
@@ -917,7 +943,7 @@ textarea::placeholder {
                 <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; height: 100%;">
                     <i class="fa fa-clock-o" style="font-size: 2rem; margin-bottom: 15px; color: #45b7d1;"></i>
                     <h4 style="margin-bottom: 10px;">Disponibilité</h4>
-                    <p style="margin: 0; opacity: 0.9;">Lun - Ven, 9h - 18h</p>
+                    <p style="margin: 0; opacity: 0.9;">Lun - Samedi, 8h - 18h</p>
                 </div>
             </div>
         </div>

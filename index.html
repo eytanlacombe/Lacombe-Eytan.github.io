@@ -167,21 +167,184 @@ textarea::placeholder {
             margin-top: 5px;
         }
 
-        /* Styles pour la navigation */
+        /* Styles améliorés pour la navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
         #menu {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: transparent;
+            box-shadow: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            min-height: 70px;
+        }
+
+        #menu li {
+            margin: 0 10px;
         }
 
         #menu li a {
             color: #374054;
-            padding: 15px 20px;
+            padding: 15px 25px;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
         }
 
         #menu li a:hover {
             color: #3498db;
+            background: rgba(52, 152, 219, 0.1);
+            transform: translateY(-2px);
+        }
+
+        #menu li a.active {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Animation de survol */
+        #menu li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        #menu li a:hover::before {
+            left: 100%;
+        }
+
+        /* Mobile menu styles améliorés */
+        #mobile-menu-open {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        #mobile-menu-open:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+
+        #mobile-menu-close {
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #374054;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        #mobile-menu-close span {
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        #mobile-menu-close i {
+            margin-left: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #mobile-menu-open {
+                display: block;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.98);
+                transition: left 0.3s ease;
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+            }
+
+            header.active {
+                left: 0;
+            }
+
+            #mobile-menu-close {
+                display: block;
+            }
+
+            #menu {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                padding-top: 80px;
+                height: 100%;
+            }
+
+            #menu li {
+                margin: 5px 0;
+                width: 100%;
+            }
+
+            #menu li a {
+                padding: 20px 30px;
+                border-radius: 0;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                text-align: left;
+                display: block;
+            }
+
+            #menu li a:hover {
+                background: rgba(52, 152, 219, 0.1);
+                transform: translateX(10px);
+            }
+
+            .heading {
+                font-size: 2rem;
+            }
+            .project-info {
+                padding: 25px;
+            }
+            .project-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
 
         /* Styles pour la section lead */
@@ -193,6 +356,7 @@ textarea::placeholder {
             justify-content: center;
             color: white;
             text-align: center;
+            margin-top: 0;
         }
 
         #lead-content h1 {
@@ -225,6 +389,11 @@ textarea::placeholder {
         section, div[id] {
             min-height: auto;
             padding: 80px 0;
+            margin-top: 70px; /* Compenser la hauteur du header fixe */
+        }
+
+        section:first-of-type, div[id]:first-of-type {
+            margin-top: 0;
         }
 
         #about {
@@ -326,29 +495,24 @@ textarea::placeholder {
             background: white;
             border-radius: 5px;
         }
-        
-        @media (max-width: 768px) {
-            .heading {
-                font-size: 2rem;
-            }
-            .project-info {
-                padding: 25px;
-            }
-            .project-stats {
-                flex-direction: column;
-                gap: 15px;
-            }
 
-            #lead-content h1 {
-                font-size: 2rem;
-            }
-
-            #experience-timeline:before, .vtimeline-date {
-                display: none;
-            }
+        /* Ajout d'un padding-top pour compenser le header fixe */
+        body {
+            padding-top: 0;
         }
-    </style>
-	<style>
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation au scroll pour le header */
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Styles des projets existants */
         * {
             margin: 0;
             padding: 0;
@@ -356,97 +520,14 @@ textarea::placeholder {
         }
         
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
         }
         
         #projects {
             padding: 60px 0;
             background-color: #f8f9fa;
-        }
-        
-        .heading {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #2c3e50;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .project {
-            background: white;
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid #3498db;
-        }
-        
-        .project h3 {
-            color: #2c3e50;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        
-        .project h4 {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
-        
-        .tech-tags {
-            margin-bottom: 20px;
-        }
-        
-        .tech-tag {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 5px 12px;
-            margin: 3px;
-            border-radius: 15px;
-            font-size: 0.9em;
-        }
-        
-        .project p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        
-        .project-stats {
-            display: flex;
-            gap: 30px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            min-width: 80px;
-        }
-        
-        .stat-number {
-            display: block;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #3498db;
-        }
-        
-        .stat-label {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            margin-top: 5px;
         }
         
         .icon {
@@ -456,20 +537,6 @@ textarea::placeholder {
         
         strong {
             color: #2c3e50;
-        }
-        
-        @media (max-width: 768px) {
-            .project-stats {
-                justify-content: center;
-            }
-            
-            .project {
-                padding: 20px;
-            }
-            
-            .heading {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
@@ -485,25 +552,25 @@ textarea::placeholder {
         </div>
         <ul id="menu" class="shadow">
             <li>
-                <a href="#about">À propos de moi</a>
+                <a href="#about" class="nav-link">À propos de moi</a>
             </li>
             <li>
-                <a href="#experience">Expérience</a>
+                <a href="#experience" class="nav-link">Expérience</a>
             </li>
             <li>
-                <a href="#education">Formation</a>
+                <a href="#education" class="nav-link">Formation</a>
             </li>
             <li>
-                <a href="#projects">Projets</a>
+                <a href="#projects" class="nav-link">Projets</a>
             </li>
             <li>
-                <a href="#skills">Compétences</a>
+                <a href="#skills" class="nav-link">Compétences</a>
             </li>
             <li>
-                <a href="#apprentissage">Apprentissage</a>
+                <a href="#apprentissage" class="nav-link">Apprentissage</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </li>
         </ul>
     </header>
